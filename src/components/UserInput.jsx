@@ -1,4 +1,7 @@
 
+/*
+*Function to get user input
+*/
 export default function UserInput({ onChange, userInput }) {
 
 

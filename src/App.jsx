@@ -3,6 +3,7 @@ import Header from "./components/Header.jsx";
 import Results from "./components/Results.jsx";
 import UserInput from "./components/UserInput.jsx";
 
+
 function App() {
   const [userInput, setUserInput] = useState({
     initialInvestment: 10000,
@@ -11,6 +12,9 @@ function App() {
     duration: 10,
   });
 
+  /*
+   * Function to handle setting new input from the user 
+  */
   function handleChange(inputIdentifier, newValue) {
     setUserInput((prevUserInput) => {
       return {
