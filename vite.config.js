@@ -7,6 +7,7 @@ export default defineConfig({
   plugins: [react()],
   test: {
     environment: "jsdom",
+    ui: true,
     globals: true,
     coverage: {
       provider: "c8",

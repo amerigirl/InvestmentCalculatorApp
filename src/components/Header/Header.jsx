@@ -1,4 +1,5 @@
-import investmentCalculator from "./assets/logo.png";
+import React from "react";
+import logo from "../../assets/logo.png";
 /**
  * Function for creating the header
  */
