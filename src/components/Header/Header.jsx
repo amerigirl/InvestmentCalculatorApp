@@ -1,5 +1,4 @@
-import logo from '../assets/investment-calculator-logo.png';
-
+import investmentCalculator from "./assets/logo.png";
 /**
  * Function for creating the header
  */
