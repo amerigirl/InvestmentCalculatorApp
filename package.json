@@ -9,13 +9,14 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "vitest",
-    "test:ui": "vitest --ui", 
+    "test:ui": "vitest --ui",
     "test:coverage": "vitest --coverage"
   },
   "dependencies": {
     "jsdom": "^25.0.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^7.1.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",
