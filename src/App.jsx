@@ -26,7 +26,7 @@ function App() {
     <>
       <Header />
       <UserInput userInput={userInput} onChange={handleChange} />
-      {!inputIsValid && <p>Please choose a number greater than zero</p>}
+      {!inputIsValid && <p className="center">Please choose a number greater than zero :)</p>}
       {inputIsValid && <Results input={userInput} />}
     </>
   );
