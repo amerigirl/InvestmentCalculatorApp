@@ -15,15 +15,19 @@ function App() {
     setUserInput((prevUserInput) => {
       return {
         ...prevUserInput,
-        [inputIdentifier]: newValue,
+        [inputIdentifier]: +newValue, //the + will force a conversion from string to num value
       };
     });
   }
+
+  const inputIsValid = userInput.duration >= 1;
+
   return (
     <>
       <Header />
-      <UserInput userInput={userInput} onChange={handleChange}/>
-      <Results input={userInput} />
+      <UserInput userInput={userInput} onChange={handleChange} />
+      {!inputIsValid && <p>Please choose a number greater than zero</p>}
+      {inputIsValid && <Results input={userInput} />}
     </>
   );
 }
