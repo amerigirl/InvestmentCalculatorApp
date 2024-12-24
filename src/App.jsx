@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Header from "./components/Header.jsx";
-import Results from "./components/Results.jsx";
+import Header from "./components/Header/Header.jsx";
+import Results from "./components/Results/Results.jsx";
 import UserInput from "./components/UserInput.jsx";
 
 

@@ -1,5 +1,11 @@
-test('Component Header renders', () => {    
+import { test, expect } from "vitest";
+import { render, screen } from "@testing-library/react";
+import Header from "./Header"; // Adjust the path if necessary
+
+
+  test("renders the component"), () => {
     render(<Header />);
-    const headerElement = screen.getByText(/Investment Calculator/i);
+    const headerElement = screen.getByText(/Investment Calculator/i); // Replace with actual text
     expect(headerElement).toBeInTheDocument();
-    });
+  };
+

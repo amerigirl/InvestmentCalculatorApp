@@ -1,5 +1,5 @@
-import { calculateInvestmentResults } from "../util/investment";
-import { formatter } from "../util/investment";
+import { calculateInvestmentResults } from "../../util/investment";
+import { formatter } from "../../util/investment";
 
 /**
  * Function for returning results tables
