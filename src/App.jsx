@@ -14,14 +14,14 @@ function App() {
   const inputIsValid = validateInput(userInput);
 
   return (
-    <>
+    < div className="green-center">
       <Header />
       <UserInput userInput={userInput} onChange={handleChange} />
       {!inputIsValid && (
         <p className="center">Please choose a number greater than zero :)</p>
       )}
       {inputIsValid && <Results input={userInput} />}
-    </>
+    </ div>
   );
 
   /*
