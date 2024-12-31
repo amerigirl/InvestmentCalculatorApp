@@ -16,11 +16,11 @@ function App() {
    */
   function handleChange(inputIdentifier, newValue) {
     const numValue = +newValue;
-    if (!isNaN(numValue) && numValue < 0) {
+    if (!isNaN(numValue) && numValue >= 0) {
       setUserInput((prevUserInput) => {
         return {
           ...prevUserInput,
-          [inputIdentifier]: +newValue, //the + will force a conversion from string to num value
+          [inputIdentifier]: numValue, //the + will force a conversion from string to num value
         };
       });
     }

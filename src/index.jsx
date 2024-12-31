@@ -11,7 +11,6 @@ root.render(
   <Router>
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="/user-input" element={<UserInput />} />  
     </Routes>
   </Router>
 );
