@@ -11,6 +11,19 @@ function App() {
     duration: 10,
   });
 
+  const inputIsValid = validateInput(userInput);
+
+  return (
+    <>
+      <Header />
+      <UserInput userInput={userInput} onChange={handleChange} />
+      {!inputIsValid && (
+        <p className="center">Please choose a number greater than zero :)</p>
+      )}
+      {inputIsValid && <Results input={userInput} />}
+    </>
+  );
+
   /*
    * Function to handle setting new input from the user
    */
@@ -25,18 +38,22 @@ function App() {
       });
     }
   }
-  const inputIsValid = !isNaN(userInput.duration) && userInput.duration >= 1;
 
-  return (
-    <>
-      <Header />
-      <UserInput userInput={userInput} onChange={handleChange} />
-      {!inputIsValid && (
-        <p className="center">Please choose a number greater than zero :)</p>
-      )}
-      {inputIsValid && <Results input={userInput} />}
-    </>
-  );
+  /*
+    * Function to validate user input
+    */
+  function validateInput(input) {
+    return (
+      !isNaN(input.initialInvestment) &&
+      input.initialInvestment >= 1 &&
+      !isNaN(input.annualInvestment) &&
+      input.annualInvestment >= 1 &&
+      !isNaN(input.expectedReturn) &&
+      input.expectedReturn >= 1 &&
+      !isNaN(input.duration) &&
+      input.duration >= 1
+    );
+  }
 }
 
 export default App;
