@@ -1,9 +1,7 @@
 import { useState } from "react";
 import Header from "./components/Header/Header.jsx";
-import LandingPange from "./components/LandingPage/LandingPage.jsx";
 import Results from "./components/Results/Results.jsx";
 import UserInput from "./components/UserInput.jsx";
-
 
 function App() {
   const [userInput, setUserInput] = useState({
@@ -14,24 +12,28 @@ function App() {
   });
 
   /*
-   * Function to handle setting new input from the user 
-  */
+   * Function to handle setting new input from the user
+   */
   function handleChange(inputIdentifier, newValue) {
-    setUserInput((prevUserInput) => {
-      return {
-        ...prevUserInput,
-        [inputIdentifier]: +newValue, //the + will force a conversion from string to num value
-      };
-    });
+    const numValue = +newValue;
+    if (!isNaN(numValue) && numValue < 0) {
+      setUserInput((prevUserInput) => {
+        return {
+          ...prevUserInput,
+          [inputIdentifier]: +newValue, //the + will force a conversion from string to num value
+        };
+      });
+    }
   }
-
-  const inputIsValid = userInput.duration >= 1;
+  const inputIsValid = !isNaN(userInput.duration) && userInput.duration >= 1;
 
   return (
     <>
       <Header />
       <UserInput userInput={userInput} onChange={handleChange} />
-      {!inputIsValid && <p className="center">Please choose a number greater than zero :)</p>}
+      {!inputIsValid && (
+        <p className="center">Please choose a number greater than zero :)</p>
+      )}
       {inputIsValid && <Results input={userInput} />}
     </>
   );
