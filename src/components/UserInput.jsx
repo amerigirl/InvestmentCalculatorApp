@@ -1,10 +1,7 @@
-
 /*
-*Function to get user input
-*/
+ *Function to get user input
+ */
 export default function UserInput({ onChange, userInput }) {
-
-
   //come back and refactor this with an inputpair component!
 
   return (
