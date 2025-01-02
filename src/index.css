@@ -11,8 +11,9 @@ body {
   color: #1a1f1d;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
+  padding: 3rem;
 }
 
 .green-center {
@@ -25,9 +26,10 @@ body {
 
 #user-input {
   padding: 1rem;
-  max-width: 30rem;
+  max-width: 31rem;
   margin: 2rem auto;
   border-radius: 4px;
+  outline: 1px solid black;
   background-color: rgb(255, 255, 255);
 }
 
