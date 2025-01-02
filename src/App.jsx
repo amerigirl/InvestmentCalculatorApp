@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "./components/Header/Header.jsx";
 import Results from "./components/Results/Results.jsx";
 import UserInput from "./components/UserInput.jsx";
+import HelpfulHints from "./components/HelpfulHints/HelpfulHints.jsx";
 
 function App() {
   const [userInput, setUserInput] = useState({
@@ -15,6 +16,7 @@ function App() {
 
   return (
     < div className="green-center">
+      <HelpfulHints className="left-align"/>
       <Header />
       <UserInput userInput={userInput} onChange={handleChange} />
       {!inputIsValid && (
