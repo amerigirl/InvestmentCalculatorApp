@@ -16,18 +16,21 @@ function App() {
 
   return (
     <>
-    <div className="container">
-        <HelpfulHints/>
-      <div className="green-center">
-        <Header />
-        <UserInput userInput={userInput} onChange={handleChange} />
-        {!inputIsValid && (
-          <p className="center">Please choose a number greater than zero :)</p>
-        )}
-        {inputIsValid && <Results input={userInput} />}
+      <div className="container">
+        <div className="helpful-hints">
+          <HelpfulHints />
+        </div>
+        <div className="green-center">
+          <Header />
+          <UserInput userInput={userInput} onChange={handleChange} />
+          {!inputIsValid && (
+            <p className="center">
+              Please choose a number greater than zero :)
+            </p>
+          )}
+          {inputIsValid && <Results input={userInput} />}
+        </div>
       </div>
-    </div>
-    
     </>
   );
 
