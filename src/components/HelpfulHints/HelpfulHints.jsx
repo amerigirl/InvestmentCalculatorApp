@@ -1,7 +1,8 @@
+import './HelpfulHints.styles.css';
 
 export default function HelpfulHints(){
     return (
-        <div>
+        <div className='helpful-hints'>
   Placeholder text
         </div>
     );

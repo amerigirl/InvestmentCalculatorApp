@@ -16,6 +16,16 @@ body {
   padding: 3rem;
 }
 
+.container{/* always use a container to place elements vertially @ top*/
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.container > * {
+  margin: 0 20px;
+}
+
 .green-center {
   display: flex;
   flex-direction: column;
