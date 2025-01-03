@@ -17,9 +17,11 @@ function App() {
   return (
     <>
       <div className="container">
+
         <div className="helpful-hints">
           <HelpfulHints />
         </div>
+
         <div className="green-center">
           <Header />
           <UserInput userInput={userInput} onChange={handleChange} />
@@ -30,7 +32,9 @@ function App() {
           )}
           {inputIsValid && <Results input={userInput} />}
         </div>
+
       </div>
+      
     </>
   );
 
