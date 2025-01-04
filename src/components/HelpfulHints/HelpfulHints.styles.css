@@ -1,5 +1,10 @@
-.helpful-hints {
+#helpful-hints {
 display: flex;
-background-color:red;
-margin: 2rem 4rem;
+margin-top: 2rem;
+}
+
+#pic {
+    width: 400px;
+    height: 200px;
+    border-radius: 5px;
 }

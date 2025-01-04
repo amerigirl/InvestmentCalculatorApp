@@ -6,21 +6,19 @@
 
 body {
   display: flex;
-  justify-content:center; /* center the container along main axis */
-  align-items:center; /* center the container along cross axis */
+  justify-content: center; /* center the container along main axis */
+  align-items: center; /* center the container along cross axis */
   padding: 3rem;
   border: red 1px solid; /* for debugging */
   font-family: "Quicksand", sans-serif;
-  
 }
 
 .container {
   /* always use a container to place elements vertially @ top*/
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 10rem;
-  width:65rem;
+  align-items: center;
+  gap: 2rem;
+  width: 65rem;
   border: red 1px solid; /* for debugging */
 }
 
