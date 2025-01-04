@@ -16,10 +16,9 @@ body {
 .container {
   /* always use a container to place elements vertially @ top*/
   display: flex;
-  align-items: center;
-  gap: 2rem;
+  align-items:flex-end;
+  gap: 4rem;
   width: 65rem;
-  border: red 1px solid; /* for debugging */
 }
 
 .green-center {
