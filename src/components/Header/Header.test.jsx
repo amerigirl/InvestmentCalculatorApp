@@ -5,6 +5,6 @@ import "@testing-library/jest-dom";
 
 test("renders the component", () => {
   render(<Header />);
-  const headerElement = screen.getByText(/Investment Calculator/i); // Replace with actual text
+  const headerElement = screen.getByText(/Investment Calculator/i); 
   expect(headerElement).toBeInTheDocument();
 });
